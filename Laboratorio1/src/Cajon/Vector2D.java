@@ -16,11 +16,11 @@ public class Vector2D {
 	}
 	
 	public int dotProducto(Vector2D v) {
-		return (x * v.x) + (y * v.x);
+		return (x * v.x) + (y * v.y);
 	}
 	
 	public boolean esOrtogonalA(Vector2D v) {
-		return (dotProducto(v) == -1);
+		return (dotProducto(v) == 0);
 	}
 }
 

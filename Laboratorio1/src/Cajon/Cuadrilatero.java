@@ -30,7 +30,7 @@ public class Cuadrilatero {
 	
 	public Boolean isSquare() {
 		return (isRectangulo() &&
-				l1.igualLongitud(l3));
+				l1.igualLongitud(l2));
 	}
 
 }

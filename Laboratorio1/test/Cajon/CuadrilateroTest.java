@@ -25,9 +25,9 @@ public class CuadrilateroTest {
 	@Test
 	public void testRectangle() {
 		String msg = "Should be a rectangle";
-		assertTrue(msg, square1.isRectangulo());
-		assertTrue(msg, square2.isRectangulo());
-		assertTrue(msg, rectangle1.isRectangulo());
+		assertTrue(msg, square1.isRectangulo()); //Yes
+		assertTrue(msg, square2.isRectangulo()); //YES
+		assertTrue(msg, rectangle1.isRectangulo()); 
 		assertTrue(msg, rectangle2.isRectangulo());
 		assertFalse("Should not be a rectangle", quad.isRectangulo());
 	}
@@ -36,8 +36,8 @@ public class CuadrilateroTest {
 	public void testSquare() {
 		String tmsg = "Should be a square";
 		String fmsg = "Should not be a square";
-		assertTrue(tmsg, square1.isSquare());
 		assertTrue(tmsg, square2.isSquare());
+		assertTrue(tmsg, square1.isSquare());
 		assertFalse(fmsg, rectangle1.isSquare());
 		assertFalse(fmsg, rectangle2.isSquare());
 		assertFalse(fmsg, quad.isSquare());
