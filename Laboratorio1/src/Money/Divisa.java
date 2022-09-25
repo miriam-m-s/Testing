@@ -22,11 +22,9 @@ public class Divisa {
 	 * @return valor en la divisa universal
 	 */
 	public int valorUniversal(int cantidad) {
-		double valor = cantidad * rate;
-		int entera= (int) (valor/100); // 1
-		int decimal=(int) (valor%100); // 50
+
 		
-		return entera * 100 + decimal;
+		return (int) (cantidad * rate);
 	}
 
 	/** Nombre de la divisa
@@ -61,6 +59,6 @@ public class Divisa {
 		
 		int universal_ = valorUniversal(cantidad);
 		
-		return universal_ / otraDivisa.rate;
+		return (int) (universal_ / otraDivisa.rate);
 	}
 }

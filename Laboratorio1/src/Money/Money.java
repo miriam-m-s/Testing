@@ -37,7 +37,10 @@ public class Money implements Comparable {
 	 *  @return String con informaci�n de la moneda.
 	 */
 	public String toString() {
-		
+		int entero=cantidad/100;
+		int decimal=cantidad%100;
+		if(decimal%10==0)decimal/=10;
+		return (entero+","+decimal+" "+ divisa.getName());
 	}
 	
 	/**
@@ -45,6 +48,8 @@ public class Money implements Comparable {
 	 * @return Valor universal de la cantidad
 	 */
 	public int valorUniversal() {
+		
+		return divisa.valorUniversal(cantidad);
 		
 	}
 	

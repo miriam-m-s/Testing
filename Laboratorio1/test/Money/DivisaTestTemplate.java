@@ -19,12 +19,18 @@ public class DivisaTestTemplate {
 
 	@Test
 	public void testGetName() {
-		fail("No implementado");
+		assertEquals((String)"SEK", SEK.getName());
+		assertEquals((String)"DKK", DKK.getName());	
+		assertEquals((String)"EUR", EUR.getName());
+
 	}
 	
 	@Test
 	public void testGetRate() {
-		fail("No implementado");
+		assertEquals((Double)0.15, SEK.getRate());
+		assertEquals((Double)0.20, DKK.getRate());
+		assertEquals((Double)1.5, EUR.getRate());
+		
 	}
 	
 	@Test
