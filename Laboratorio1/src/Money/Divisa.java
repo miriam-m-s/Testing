@@ -22,15 +22,17 @@ public class Divisa {
 	 * @return valor en la divisa universal
 	 */
 	public int valorUniversal(int cantidad) {
+		int entera=cantidad/100;
+		int decimal=cantidad%100;
 		
-	
+		
 	}
 
 	/** Nombre de la divisa
 	 * @return nombre de la divisa
 	 */
 	public String getName() {
-		
+		return nombre;
 	}
 	
 	/** Rate de la divisa
@@ -38,20 +40,20 @@ public class Divisa {
 	 * @return rate de la divisa
 	 */
 	public Double getRate() {
-		
+		return rate;
 	}
 	
 	/** Actualiza rate de la divisa
 	 * 
 	 * @param rate  Nuevo rate de la divisa
 	 */
-	public void setRate(Double rate) {
-		
+	public void setRate(Double rate_) {
+		rate=rate_;
 	}
 	
 	/** Convierte una cantidad de una divisa al importe correspondiente en la divisa actual
 	 * 
-	 * @param cantidad importe a convertir
+	 * @param cantidad importe a convertir 
 	 * @param otraDivisa divisa origen
 	*/
 	public int valorEnEstaDivisa(int cantidad, Divisa otraDivisa) {

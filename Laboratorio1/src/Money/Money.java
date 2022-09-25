@@ -19,7 +19,7 @@ public class Money implements Comparable {
 	 * @return Cantidad.
 	 */
 	public int getCantidad() {
-		
+		return cantidad;
 	}
 	
 	/**
@@ -27,14 +27,14 @@ public class Money implements Comparable {
 	 * @return Divisa asociada a esta cantidad
 	 */
 	public Divisa getDivisa() {
-		
+		return divisa;
 	}
 	
 	/**
 	 * Devuelve un String "cantidad nombre de divisa", e.g. "10.5 SEK".
 	 * Los numeros decimales se representan con enteros, e.g "10.5 SEK" se almacena como 1050
 	 * 
-	 *  @return String con información de la moneda.
+	 *  @return String con informaciï¿½n de la moneda.
 	 */
 	public String toString() {
 		
@@ -55,15 +55,17 @@ public class Money implements Comparable {
 	 */
 	public Boolean equals(Money otra) {
 		
+		return (divisa==otra.divisa&&cantidad==otra.cantidad);	
 	}
 	
 	/**
-	 * Añade un objeto Money al actual
-	 * @param Objeto Money a añadir.
+	 * Aï¿½ade un objeto Money al actual 
+	 * @param Objeto Money a aï¿½adir.
 	 * @return Un nuevo objeto Money con la divisa del actual, y la cantidad acumulada con el importe del objeto Money recibido.
 	 **/
 	public Money add(Money otra) {
-		
+	
+		return new Money(cantidad+otra.cantidad,divisa);
 	}
 
 		
@@ -73,13 +75,14 @@ public class Money implements Comparable {
 	 */
 	public Boolean isZero() {
 		
-
+		return cantidad==0;
 	}
 	/**
 	 * Convierte la cantidad del objeto actual a negativo
 	 * @return Un nuevo objeto Money con la cantidad en negativo
 	 */
-	public Money negate() {
+	public Money negate() { 
+		return new Money(-cantidad,divisa);
 	
 	}
 	
@@ -87,10 +90,13 @@ public class Money implements Comparable {
 	 * Compara dos objetos Money
 	 * @return 0  si sus valores son iguales
 	 * Un entero negativo si el objeto actual tiene menos valor que el recibido
-	 * Un entero positivo si el objeto actual tiene más valor que el recibido
+	 * Un entero positivo si el objeto actual tiene mï¿½s valor que el recibido
 	 */
 	public int compareTo(Object otra) {
-			
+		Money din=(Money)otra;
+		if(equals(din))return 0;
+		else if(cantidad>din.cantidad)return 1;
+		return -1;
 		
 	}
 }
