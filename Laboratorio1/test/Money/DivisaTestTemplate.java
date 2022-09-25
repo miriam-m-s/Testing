@@ -30,17 +30,22 @@ public class DivisaTestTemplate {
 		assertEquals((Double)0.15, SEK.getRate());
 		assertEquals((Double)0.20, DKK.getRate());
 		assertEquals((Double)1.5, EUR.getRate());
-		
 	}
 	
 	@Test
 	public void testSetRate() {
-		fail("No implementado");
+		SEK.setRate(0.7);
+		DKK.setRate(1.34);
+		EUR.setRate(2.4);
+		
+		assertEquals((Double)0.7, SEK.getRate());
+		assertEquals((Double)1.34, DKK.getRate());
+		assertEquals((Double)2.4, EUR.getRate());
 	}
 	
 	@Test
 	public void testGlobalValue() {
-		fail("No implementado");
+
 	}
 	
 	@Test

@@ -22,8 +22,6 @@ public class Divisa {
 	 * @return valor en la divisa universal
 	 */
 	public int valorUniversal(int cantidad) {
-
-		
 		return (int) (cantidad * rate);
 	}
 
