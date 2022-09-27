@@ -24,7 +24,9 @@ public class Divisa {
 	public int valorUniversal(int cantidad) {
 		//Me ha dicho Sergio que tiene sentido lo de no tragarse los decimales
 		//cantidad = 10 y rate = 1,17 -> 11,7 (int) -> 11 ??¿?¿
-		return (int) (cantidad * rate);
+		//return (int) (cantidad * rate);
+		Double value =(cantidad * rate);
+		return DoubleToInt(value);
 	}
 
 	/** Nombre de la divisa
@@ -56,12 +58,18 @@ public class Divisa {
 	 * @param otraDivisa divisa origen
 	*/
 	public int valorEnEstaDivisa(int cantidad, Divisa otraDivisa) {
-							
 		//valorUniversal de la otra divisa / rate de la divisa actual
-		//return (int) (otraDivisa.valorUniversal(cantidad)/rate);
+		int universal_ = otraDivisa.valorUniversal(cantidad);
+		Double value = universal_ / rate;
+		return DoubleToInt(value);
+	}
+	
+	public int DoubleToInt(Double value) {
+		int entera = value.intValue();
+		int decimal = (int) ((value % entera) * 100);
 		
-		int universal_ = valorUniversal(cantidad);
-		
-		return (int) (universal_ / otraDivisa.rate);
+		if(decimal == 0) return entera;
+		else
+			return  entera * 100 + decimal;
 	}
 }

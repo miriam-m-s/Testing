@@ -58,8 +58,7 @@ public class Money implements Comparable {
 	 * @return Boolean indicando equivalencia
 	 */
 	public Boolean equals(Money otra) {
-		//valorUniversal == otra.valorUniversal
-		return (divisa==otra.divisa&&cantidad==otra.cantidad);	
+		return otra.valorUniversal() == valorUniversal();
 	}
 	
 	/**
@@ -69,8 +68,7 @@ public class Money implements Comparable {
 	 **/
 	public Money add(Money otra) {
 		//Pasamos la cantidad del money recibido a nuestra divisa, y lo sumamos al nuestro
-		//Money(cantidad + divisa.valorEnEstaDivisa(otra.cantidad, otra.divisa), divisa)
-		return new Money(cantidad+otra.cantidad,divisa);
+		return new Money(cantidad + divisa.valorEnEstaDivisa(otra.cantidad, otra.divisa), divisa);
 	}
 
 		
@@ -79,7 +77,6 @@ public class Money implements Comparable {
 	 * @return True si cantidad es cero, false e.o.c.
 	 */
 	public Boolean isZero() {
-		
 		return cantidad==0;
 	}
 	/**
@@ -88,7 +85,6 @@ public class Money implements Comparable {
 	 */
 	public Money negate() { 
 		return new Money(-cantidad,divisa);
-	
 	}
 	
 	/**
@@ -100,11 +96,6 @@ public class Money implements Comparable {
 	public int compareTo(Object otra) {
 		Money din=(Money)otra;
 		if(equals(din))return 0;
-		
-		//PASAR LA DIFERENCIA
-	//  else if (valorUniversal() > din.valorUniversal()) return 1;
-		else if(cantidad>din.cantidad)return 1;
-		return -1;
-		
+		else return valorUniversal() - din.valorUniversal();
 	}
 }

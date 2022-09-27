@@ -30,7 +30,7 @@ public class MoneyTestTemplate {
 
 	@Test
 	public void testGetCantidad() {
-		fail("No implementado");
+		assertEquals("No es correcto el cambio de SEK a DKK", 1601333, SEK100.getCantidad());
 	}
 
 	@Test

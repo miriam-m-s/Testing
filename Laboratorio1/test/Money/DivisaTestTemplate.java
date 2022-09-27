@@ -45,12 +45,26 @@ public class DivisaTestTemplate {
 	
 	@Test
 	public void testGlobalValue() {
-
+		fail("Tus muetos");
 	}
 	
 	@Test
 	public void testValueEnEstaDivisa() {
-		fail("No implementado");
+		int cantidad = 12010;
+		int result;
+		//SEK ===============================
+		result = SEK.valorEnEstaDivisa(cantidad, DKK);
+		assertEquals("No es correcto el cambio de SEK a DKK", 1601333, result);
+		result = SEK.valorEnEstaDivisa(cantidad, EUR);
+		assertEquals("No es correcto el cambio de SEK a DKK", 12010000, result);
+		//DKK ===============================
+		result = DKK.valorEnEstaDivisa(cantidad, SEK);
+		assertEquals("No es correcto el cambio de SEK a DKK", 900750, result);
+		result = DKK.valorEnEstaDivisa(cantidad, EUR);
+		assertEquals("No es correcto el cambio de SEK a DKK", 9007500, result);
+		//DKK ===============================
+		result = EUR.valorEnEstaDivisa(cantidad, SEK);
+		result = EUR.valorEnEstaDivisa(cantidad, DKK);
 	}
 
 }
