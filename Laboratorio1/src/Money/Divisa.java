@@ -25,8 +25,7 @@ public class Divisa {
 		//Me ha dicho Sergio que tiene sentido lo de no tragarse los decimales
 		//cantidad = 10 y rate = 1,17 -> 11,7 (int) -> 11 ??¿?¿
 		//return (int) (cantidad * rate);
-		Double value =(cantidad * rate);
-		return DoubleToInt(value);
+		return (int) (cantidad * rate);
 	}
 
 	/** Nombre de la divisa
@@ -60,8 +59,7 @@ public class Divisa {
 	public int valorEnEstaDivisa(int cantidad, Divisa otraDivisa) {
 		//valorUniversal de la otra divisa / rate de la divisa actual
 		int universal_ = otraDivisa.valorUniversal(cantidad);
-		Double value = universal_ / rate;
-		return DoubleToInt(value);
+		return  (int) (universal_ / rate);
 	}
 	
 	public int DoubleToInt(Double value) {
