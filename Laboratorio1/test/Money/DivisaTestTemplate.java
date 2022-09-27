@@ -68,7 +68,6 @@ public class DivisaTestTemplate {
 		assertEquals("No es correcto el cambio de SEK a DKK", 9005, result);
 		result = DKK.valorEnEstaDivisa(cantidad, EUR);
 		assertEquals("No es correcto el cambio de DKK a EUR", 90075, result);
-		//DKK ===============================
 		
 	}
 

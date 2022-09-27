@@ -71,7 +71,6 @@ public class Money implements Comparable {
 		return new Money(cantidad + divisa.valorEnEstaDivisa(otra.cantidad, otra.divisa), divisa);
 	}
 
-		
 	/**
 	 * 
 	 * @return True si cantidad es cero, false e.o.c.
