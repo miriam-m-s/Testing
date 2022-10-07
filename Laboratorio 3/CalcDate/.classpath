@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/hamcrest-all-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/hamcrest-core-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/hamcrest-library-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/junit-4.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/JUnitParams-1.0.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/JUnitParams-1.0.5-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/hlocal/TESTING/Testing/Laboratorio 3/CalcDate/libs/mockito-all-1.10.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
