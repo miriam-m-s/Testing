@@ -8,12 +8,12 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/hamcrest-all-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/hamcrest-library-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/JUnitParams-1.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/JUnitParams-1.0.5-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/usuario_local/Documents/GitHub/Testing/Laboratorio 2/Laboratorio2/libs/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="lib" path="libs/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="libs/JUnitParams-1.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/JUnitParams-1.0.5-sources.jar"/>
+	<classpathentry kind="lib" path="libs/mockito-all-1.10.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
