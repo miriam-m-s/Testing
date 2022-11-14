@@ -34,18 +34,18 @@ public class TestEmail {
 	
 	@Test
 	public void testMessageSend() throws Exception {
-		Cliente miri = mock(Cliente.class);
+		Cliente client = mock(Cliente.class);
 		
 		TemplateEngine tempEng = mock(TemplateEngine.class);
 		MailServer gmail = mock(MailServer.class);
-		Template temp=mock(Template.class);
+		Template temp = mock(Template.class);
 		
-		when(miri.getEmail()).thenReturn("Decathlon.gmail");
-		when(tempEng.preparaMensaje(temp, miri)).thenReturn("Recibido message");
+		when(client.getEmail()).thenReturn("decathlon@gmail.com");
+		when(tempEng.preparaMensaje(temp, client)).thenReturn("Recibido message");
 		
 		Mensaje msg = new Mensaje(gmail,tempEng);
-		msg.sendMensaje(miri,temp);
+		msg.sendMensaje(client,temp);
 		
-		verify(gmail).send("Decathlon.gmail", "Recibido message");
+		verify(gmail).send("decathlon@gmail.com", "Recibido message");
 	}
 }

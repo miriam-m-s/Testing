@@ -13,6 +13,10 @@
 	<classpathentry kind="lib" path="libs/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="libs/JUnitParams-1.0.5.jar"/>
 	<classpathentry kind="lib" path="libs/JUnitParams-1.0.5-sources.jar"/>
-	<classpathentry kind="lib" path="libs/mockito-core-4.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/mockit/mockito-core-4.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/mockit/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="lib" path="libs/mockit/objenesis-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/mockit/byte-buddy-1.12.16.jar"/>
+	<classpathentry kind="lib" path="libs/mockit/byte-buddy-agent-1.12.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
