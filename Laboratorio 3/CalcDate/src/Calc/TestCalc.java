@@ -25,7 +25,7 @@ public class TestCalc {
 	
 	@Test
 	@Parameters(method = "getCalculation")
-	public void testCalculation(int month1, int day1, int month2, int day2, int year) {
+	public void testCalculationmo(int month1, int day1, int month2, int day2, int year) {
 		Calculate calc = new Calculate();
 		assertEquals(2, calc.cal(month1, day1, month2, day2, year));
 	}

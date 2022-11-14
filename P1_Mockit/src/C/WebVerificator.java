@@ -10,7 +10,7 @@ public class WebVerificator {
 	public void checkWeb(Server server, Web web) {
 		Result result = server.connect(web);
 		
-		if (result.isOk( )) {
+		if (result.isOk()) {
 			log.registerWebisOk(web);
 		} else {
 			log.registerWebReturnedError(web,result);

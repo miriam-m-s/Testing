@@ -10,42 +10,32 @@ import junitparams.Parameters;
 
 import static org.mockito.Mockito.*;
 
-/*@RunWith(JUnitParamsRunner.class)*/
+@RunWith(JUnitParamsRunner.class)
 public class TestEmail {
-	/*	
-	private static final Object[] getEmail() {
-		return new Object[] {//M1 D1 M2 D2  YEAR
-				new Object[] {1 , 1, 1, 3, 2005}, 
-				new Object[] {1 , 1, 1, 3, 2005}, 
+		
+	private static final Object[] getParameters() {
+		return new Object[] { //Email //Message
+				new Object[] {"miri@decathlon.com", "Recibido message"}, 
+				new Object[] {"josedi@lidl.com", "Nueva oferta"},
+				new Object[] {"manolo@ucm.com", "Usted ha suspendido 10"}
 		};
 	}
 	
-	@Before
-	public void setUp() throws Exception {
-	
-	}
-	
 	@Test
-	@Parameters(method = "getEmail")
-	public void testMail() {
-	
-	
-	}*/
-	
-	@Test
-	public void testMessageSend() throws Exception {
+	@Parameters(method = "getParameters")
+	public void testMessageSend(String email, String message) throws Exception {
 		Cliente client = mock(Cliente.class);
-		
 		TemplateEngine tempEng = mock(TemplateEngine.class);
+		
 		MailServer gmail = mock(MailServer.class);
 		Template temp = mock(Template.class);
 		
-		when(client.getEmail()).thenReturn("decathlon@gmail.com");
-		when(tempEng.preparaMensaje(temp, client)).thenReturn("Recibido message");
+		when(client.getEmail()).thenReturn(email);
+		when(tempEng.preparaMensaje(temp, client)).thenReturn(message);
 		
 		Mensaje msg = new Mensaje(gmail,tempEng);
 		msg.sendMensaje(client,temp);
 		
-		verify(gmail).send("decathlon@gmail.com", "Recibido message");
+		verify(gmail).send(email, message);
 	}
 }
