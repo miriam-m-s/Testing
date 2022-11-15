@@ -35,9 +35,13 @@ public class TestWeb {
 		
 		WebVerificator webVer = new WebVerificator(client);
 		webVer.checkWeb(server, web);
-		if(isOK) 
+		if(isOK) {
 			verify(client).registerWebisOk(web);
-		else 
+			verify(client, never()).registerWebReturnedError(any(), any());
+		}
+		else {
 			verify(client).registerWebReturnedError(web, result);
+			verify(client, never()).registerWebisOk(any());
+		}
 	}
 }

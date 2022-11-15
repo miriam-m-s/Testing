@@ -36,8 +36,13 @@ public class TestFacturas {
 		
 		facturaEmitter.emitirFactura(factura_, client);	
 		
-		if(preferEmail)
+		if(preferEmail) {
 			verify(emailSer).sendFactura(factura_, email);
-		else verify(printerSer).printFactura(factura_);
+			verify(printerSer, never()).printFactura(any());
+		}
+		else {
+			verify(printerSer).printFactura(factura_);
+			verify(emailSer, never()).sendFactura(any(), anyString());
+		}
 	}
 }
