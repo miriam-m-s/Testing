@@ -7,7 +7,7 @@ public class Semana {
 	
 	    public static final int DIAS_RESERVABLES = 5;
 	    
-	    // Numero de la semana en el año 2021 (1-53).
+	    // Numero de la semana en el aï¿½o 2021 (1-53).
 	    
 	    private final int numeroSemana;
 	    private final Dia[] dias;
@@ -52,7 +52,7 @@ public class Semana {
 	    	
 	    	if (validoDia(diaSemana)) {
 	    		
-	    		if (getDia(diaSemana)!=null) {
+	    		if (getDia(diaSemana) != null) {
 	    		    return getDia(diaSemana).muestraCita(hora);
 	    		}
 	    		else  return "Dia no citable";
