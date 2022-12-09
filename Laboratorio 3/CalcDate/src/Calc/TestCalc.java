@@ -11,6 +11,7 @@ import junitparams.Parameters;
 @RunWith(JUnitParamsRunner.class)
 public class TestCalc {
 	
+	
 	private static final Object[] getCalculation() {
 		return new Object[] {//M1 D1 M2 D2  YEAR
 				new Object[] {1 , 1, 1, 3, 2005}, 
