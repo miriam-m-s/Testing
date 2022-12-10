@@ -11,7 +11,7 @@ public class Dia {
 	    private Cita[] citas;
 
 	    /**
-	     * @param diaNumero numero del dia del año (1-365), si es correcto
+	     * @param diaNumero numero del dia del aï¿½o (1-365), si es correcto
 	     */
 	    public Dia(int diaNumero) throws DatoException{
 	    
@@ -26,14 +26,14 @@ public class Dia {
 
 	    /**
 	     * Busca hueco para una cita
-	     * @param duración de la cita para la que se busca hueco
-	     * @return Hora más temprana para adjudicar la cita
+	     * @param duraciï¿½n de la cita para la que se busca hueco
+	     * @return Hora mï¿½s temprana para adjudicar la cita
 	     *         Devuelve -1 si no es posible encontrar hueco
 	     */ 
 	    public int buscaSlot(int duracion)
 	    
 	    {   int hora;    
-	    	int slot = 0, sigSlot; // slot es posicion desde la que se busca tanto huecos libres seguidos como indica duración
+	    	int slot = 0, sigSlot; // slot es posicion desde la que se busca tanto huecos libres seguidos como indica duraciï¿½n
 	    	while (slot < MAX_CITAS_POR_DIA){ 
 	    		if(citas[slot] == null) {
 	            	hora = PRIMERA_CITA + slot;
@@ -44,7 +44,7 @@ public class Dia {
 	                else {
 	                   
 	                	int numSlots = duracion-1;// slots que faltan
-	                	sigSlot= slot + 1; // sigSlot empieza en la siguiente posición a slot y para recorriendo huecos libres
+	                	sigSlot= slot + 1; // sigSlot empieza en la siguiente posiciï¿½n a slot y para recorriendo huecos libres
 	                	
 	                	while (numSlots > 0 && sigSlot < MAX_CITAS_POR_DIA && citas[sigSlot] == null ) { 
 	                		
@@ -108,7 +108,7 @@ public class Dia {
 	    }
 
 	    /**
-	     * String que devuelve la descripción de la cita asignada a la hora indicada.
+	     * String que devuelve la descripciï¿½n de la cita asignada a la hora indicada.
 	     */
 	    
 	    public String muestraCita(int hora){      
@@ -129,7 +129,7 @@ public class Dia {
 	    }
 
 	    /**
-	     * @return Numero de dia dentro del año (1-365).
+	     * @return Numero de dia dentro del aï¿½o (1-365).
 	     */
 	    public int getDiaNumero()
 	    {
@@ -138,7 +138,7 @@ public class Dia {
 	    
 	    /**
 	     * @param hora 
-	     * @return true si la hora está en el intervalo válido
+	     * @return true si la hora estï¿½ en el intervalo vï¿½lido
 	     *         false en otro caso.
 	     */
 	    public boolean validaHora(int hora)
@@ -147,8 +147,8 @@ public class Dia {
 	    }
 	    /**
 	     * @param hora de inicio de cita la cita
-	     * @param duración de la cita
-	     * @return true si hay hueco libre a partir de la hora indicada y de la duración requerida
+	     * @param duraciï¿½n de la cita
+	     * @return true si hay hueco libre a partir de la hora indicada y de la duraciï¿½n requerida
 	     *         false en otro caso.
 	     */
 	    public boolean huecoLibre(int hora, int duracion) {
