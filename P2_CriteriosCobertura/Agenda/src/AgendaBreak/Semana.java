@@ -7,7 +7,7 @@ public class Semana {
 	
 	    public static final int DIAS_RESERVABLES = 5;
 	    
-	    // Numero de la semana en el año 20201 (1-53).
+	    // Numero de la semana en el aï¿½o 20201 (1-53).
 	    
 	    private final int numeroSemana;
 	    private final Dia[] dias;
@@ -27,17 +27,17 @@ public class Semana {
 	        this.numeroSemana = numeroSemana;
 	        dias = new Dia[DIAS_RESERVABLES];
 	        
-	        numDia=Zeller(1,1,2020)-1;
+	        numDia=Zeller(1,1,2021)-1;
         	diasPrimeraSemana= 7 - numDia;
         	diaDelAnio=1;
         	
 	        if (numeroSemana > 1) {
 	        	numDia=0;
-	        	diaDelAnio = diasPrimeraSemana + (numeroSemana-1) * 7 + 1;
+	        	diaDelAnio = diasPrimeraSemana + (numeroSemana-2) * 7 + 1;
 	        }
 	        	
 	        
-	        for(int dia = numDia; dia < DIAS_RESERVABLES && diaDelAnio <= 366; dia++) {
+	        for(int dia = numDia; dia < DIAS_RESERVABLES && diaDelAnio <= 365; dia++) {
 	            dias[dia] = new Dia(diaDelAnio);
 	            diaDelAnio++;
 	        }
@@ -73,7 +73,7 @@ public class Semana {
 	    public Dia getDia(int diaSemana)
 	    {
 	        if(validoDia(diaSemana)) {
-	            return dias[diaSemana];
+	            return dias[diaSemana-1];
 	        }
 	        else {
 	            return null;

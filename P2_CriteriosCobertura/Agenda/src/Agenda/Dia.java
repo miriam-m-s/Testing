@@ -154,7 +154,6 @@ public class Dia {
 	    public boolean huecoLibre(int hora, int duracion) {
 	    	
 	    	if (validaHora(hora)) {
-	    		
 		    	int horaIni = hora - PRIMERA_CITA;
 	            if(citas[horaIni] == null) {
 	            	duracion--;
